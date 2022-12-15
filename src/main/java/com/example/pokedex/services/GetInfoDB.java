@@ -4,12 +4,12 @@ import java.sql.*;
 
 public class GetInfoDB implements GetInfoInterface{
     private ResultSet rs;
-    public void getInfo(int id) {
+    public void getInfo(int id, String db_url) {
         /* Connect to the database */
         Connection conn = null;
         try {
             // db parameters
-            String url = "jdbc:sqlite:../sujet_TP/ressources/pokemondatabase.sqlite";
+            String url = "jdbc:sqlite:" + db_url;
             // create a connection to the database
             conn = DriverManager.getConnection(url);
             System.out.println("Connection to SQLite has been established.");

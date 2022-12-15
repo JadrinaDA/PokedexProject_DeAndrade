@@ -22,9 +22,9 @@ public class PokedexController {
         return pokemon;
     }
 
-    public PokemonDB getPokemonDB(int id)
+    public PokemonDB getPokemonDB(int id, String db_url)
     {
-        this.getInfoDB.getInfo(id);
+        this.getInfoDB.getInfo(id, db_url);
         String name = this.getInfoDB.getStringInfo("name");
         Long height = this.getInfoDB.getLongInfo("height");
         Long weight = this.getInfoDB.getLongInfo("weight");

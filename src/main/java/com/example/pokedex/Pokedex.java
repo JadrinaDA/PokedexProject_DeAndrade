@@ -29,8 +29,8 @@ public class Pokedex {
         HTMLView htmlView = new HTMLView(use_db);
         if (use_db)
         {
-            consoleView.setPokemonDB(pokedexController.getPokemonDB(Integer.parseInt(args[0])));
-            htmlView.setPokemonDB(pokedexController.getPokemonDB(Integer.parseInt(args[0])));
+            consoleView.setPokemonDB(pokedexController.getPokemonDB(Integer.parseInt(args[0]), args[1]));
+            htmlView.setPokemonDB(pokedexController.getPokemonDB(Integer.parseInt(args[0]), args[1]));
         }
         else {
             consoleView.setPokemon(pokedexController.getPokemon(Integer.parseInt(args[0])));
